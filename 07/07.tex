@@ -98,9 +98,16 @@ Fibonacci-Zahlen, also $T(n) \leq \left( \frac{1 + \sqrt{5}}{2} \right)^n \appro
 Statt $c\in V$ beliebig zu wählen, wähle $v$ mit maximalem Grad\\
 Zuvor entfernen wir nicht nur die Knoten com Grad 0, sondern auch die vom Grad 1 mit folgender Überlegung:
 \begin{figure}[H]
+	\centering
 	\begin{tikzpicture}
-	\draw (-1,1)--(-1,0)--(0,0)--(0,2)--(-1,1)--(1,1);
-	\draw (-.2,-.5)--(.5,0);
+	\draw (-1,1) node[fill, circle, scale=.5]{}
+	--(-1,0) node[fill, circle, scale=.5]{}
+	--(0,0) node[fill, circle, scale=.5]{}
+	--(0,2) node[fill, circle, scale=.5]{}
+	--(-1,1)
+	--(1,1) node[fill, circle, scale=.5]{};
+	\draw (-.2,-.5) node[fill, circle, scale=.5]{}
+	--(.5,0) node[fill, circle, scale=.5]{};
 	\end{tikzpicture}
 \end{figure}
 \begin{itemize}
@@ -110,9 +117,17 @@ Zuvor entfernen wir nicht nur die Knoten com Grad 0, sondern auch die vom Grad 1
 	$\rightsquigarrow$ Wir können davon ausgehen, dass es mindestens einen Knoten vom Grad $\geq$ 3 gibt
 \end{itemize}
 \begin{figure}[H]
+	\centering
 	\begin{tikzpicture}
-	\draw (-1,.5)--(-.5,0)--(.5,.75)--(-.5,1)--(-1,.5);
-	\draw (1,-.1)--(1.5,.5)--(1,.9)--(1,-.1);
+	\draw (-1,.5) node[fill, circle, scale=.5]{}
+	--(-.5,0) node[fill, circle, scale=.5]{}
+	--(.5,.75) node[fill, circle, scale=.5]{}
+	--(-.5,1) node[fill, circle, scale=.5]{}
+	--(-1,.5);
+	\draw (1,-.1) node[fill, circle, scale=.5]{}
+	--(1.5,.5) node[fill, circle, scale=.5]{}
+	--(1,.9) node[fill, circle, scale=.5]{}
+	--(1,-.1);
 	\end{tikzpicture}
 \end{figure}
 Verbesserte Abschätzung für die Anzahl $T$ der Teilprobleme
@@ -161,6 +176,7 @@ Geht es besser?\\
 	\item Iterire
 \end{itemize}
 \begin{figure}[H]
+	\centering
 	\begin{tikzpicture}
 	\draw (0,0) node[fill, circle](A){} -- (.75,.75)
 	(A) --(-.75,.75)
@@ -171,6 +187,7 @@ Geht es besser?\\
 \end{figure}
 Am Ende hat jeder Knoten einen Grad zwischen 2 und $k$.\\
 \begin{figure}[H]
+	\centering
 	\begin{tikzpicture}
 	\draw (0,1) node[fill=red, circle, label={VC}](A){} -- (0,.25)
 	(A) --(-.75,.5)
